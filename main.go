@@ -1,8 +1,8 @@
 package main
 
 import (
+	"apache2lb/apache2lb"
 	"flag"
-	"go-project/apache2lb"
 	"log"
 	"os"
 )
