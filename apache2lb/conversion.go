@@ -210,7 +210,7 @@ func ConvertToNginx(apacheConf *ApacheConfig) (string, []ConversionWarning) {
 					// Apache 的 <VirtualHost example.com:80> 行为是监听所有 IP 的 80 端口，然后匹配 Host header
 					// Nginx 中，这通常是 listen 80; server_name example.com;
 					// 如果 host 是一个具体的 IP，如 <VirtualHost 192.168.1.1:80>，则 Nginx listen 192.168.1.1:80;
-					isIP := regexp.MustCompile(`^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$|^\[.*\]$`).MatchString(host) // 简单IP判断
+					isIP := regexp.MustCompile(`^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$|^\[.*]$`).MatchString(host) // 简单IP判断
 					if isIP {
 						listenStr = fmt.Sprintf("%s:%s", host, port)
 					} else if len(serverNames) == 0 { // 如果 ServerName 没指定，用这个host作为server_name

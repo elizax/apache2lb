@@ -516,7 +516,7 @@ func (rc *RewriteConf) _parseRule(inputRule RuleWithConditions, numConditions in
 }
 
 var (
-	httpVarRegex = regexp.MustCompile(`%\{HTTP:([^}]+)\}`)
+	httpVarRegex = regexp.MustCompile(`%\{HTTP:([^}]+)}`)
 	varRegex     = regexp.MustCompile(`%\{[^}]+}`) // General pattern for any %{VAR}
 )
 

@@ -308,7 +308,7 @@ func parseApacheIncludeFile(filePath string, config *ApacheConfig, currentBlock 
 			}
 			expectedBlockName := strings.TrimSuffix(strings.TrimPrefix(line, "</"), ">")
 			if currentBlock == nil || !strings.EqualFold(currentBlock.Name, expectedBlockName) { // 不区分大小写比较块名
-				errors = append(errors, ParseError{Line: lineNumber, Message: fmt.Sprintf("Mismatched closing tag: found %s, expected </%s>", line, currentBlock.Name)})
+				errors = append(errors, ParseError{Line: lineNumber, Message: fmt.Sprintf("Mismatched closing tag: found %s, expected </%s>", line, expectedBlockName)})
 				// 尝试从栈中恢复，或者标记错误并继续
 			}
 			// 从栈中弹出当前块
