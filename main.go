@@ -47,18 +47,6 @@ func main() {
 	//				{Name: "CustomLog", Args: []string{"/var/log/apache2/access.log", "combined"}, Line: 15},
 	//			},
 	//		},
-	//		{
-	//			Name: "VirtualHost",
-	//			Args: []string{"*:91"},
-	//			Line: 20,
-	//			Directives: []ApacheDirective{
-	//				{Name: "ServerName", Args: []string{"example2.com"}, Line: 11},
-	//				{Name: "ServerAlias", Args: []string{"www.example2.com", "test.example2.com"}, Line: 12},
-	//				{Name: "DocumentRoot", Args: []string{"/var/www/html"}, Line: 13},
-	//				{Name: "ErrorLog", Args: []string{"/var/log/apache2/error.log"}, Line: 14},
-	//				{Name: "CustomLog", Args: []string{"/var/log/apache2/access.log", "combined"}, Line: 15},
-	//			},
-	//		},
 	//	},
 	//}
 
